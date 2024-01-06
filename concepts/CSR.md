@@ -20,3 +20,17 @@ After the page has been loaded for the first time, navigating to other pages on 
 </p>
 
 [Source : Next JS Documentation](https://nextjs.org/docs/pages/building-your-application/rendering/client-side-rendering)
+
+### Con's of Using Client Side Rendering
+
+<p>
+There are some major drawbacks of using CSR. Most common cons are mention below.
+</p>
+
+1. **Initial Page Load Time:** CSR websites initial load time is very long as compare to SSR websites. Because it's wait until the full JS Bundle get download and after download it's render the necessary HTML, CSS, and JS in client side to show the web page.
+
+2. **Not SEO Friendly:** CSR websites are not SEO friendly because when the search engine bot visit the site it doesn't find any content (HTML) in our sites as it not coming as an HTML format from server, It's only find a boilerplate HTML page that doesn't have any content means the whole web page content are not render yet in the browser. So it's impact the SEO ranking.
+
+3. **Performance issues on Low-Powered Devices:** Devices with low/limited processing power might cause less smooth user experience because the client browser need to handle the rendering it will use the client device processing power to perform the rendering.
+
+4. **Other Cons:** There are some other cons of using CSR like Managing complex application state, Possibility of Cross-Site Scripting (XSS) attacks, and Limited Performance Optimization by Servers.
