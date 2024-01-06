@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Fundamental Concepts Of Next JS
 
-## Getting Started
+---
 
-First, run the development server:
+## What Is CSR (Client Side Rendering)?
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<p>
+Before explaining client side rendering first understand how a React website loads in a browser?
+</p>
+<p>
+When a user opens a React website in a browser, it sends an HTTP request to the server where the website is hosted. The server responds by sending a minimal HTML page and the JavaScript bundle containing all the minified HTML, CSS, and JavaScript code. After downloading the full javascript bundle it's render in browser then we can see the full website.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Upon downloading the full JavaScript bundle, the browser proceeds to render the website. The rendering process involves executing the JavaScript code to dynamically generate the HTML structure, apply styles, and handle any interactive elements. Finally, the user can see and interact with the fully-rendered website.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+</p>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Now let's understand Client Side Rendering
 
-## Learn More
+<p>
+In client-Side Rendering with react, the browser downloads a minimal html page and the JavaScript needed for the page. The JavaScript then used to update the DOM and render the page. When the application is first loaded, the user may notice a slight delay before they can see the full page, this is because the page isn't fully rendered until all the JavaScript is downloaded, parsed, and executed.
 
-To learn more about Next.js, take a look at the following resources:
+After the page has been loaded for the first time, navigating to other pages on the same website is typically faster, as only necessary data needs to be fetched, and JavaScript can re-render parts of the page without requiring a full page refresh.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+</p>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[Source : Next JS Documentation](https://nextjs.org/docs/pages/building-your-application/rendering/client-side-rendering)
